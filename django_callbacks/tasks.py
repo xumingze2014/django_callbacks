@@ -28,18 +28,17 @@ class CallbackTask(object):
     @app.task
     def start_task(self):
         try:
-            args, kwargs = self.queue.get()
-            if not args and not kwargs:
-                break
-            try:
-                signals.request_started.send(self)
-                self.func(**self.kwargs)
-            finally:
-                signals.request_finished.send(self)
+            print("start")
+            signals.request_started.send(self)
+            self.func(**self.kwargs)
         except BaseException as exc:
             logger.exception(exc)
+            print("task.retry")
             if self.times < 20:
                 # 如果self.func执行失败，延时5*times秒再次执行一次
                 raise self.func.retry(countdown=5 * self.times, exc=exc)
                 self.times = self.times + 1
             logger.exception('无法连接服务器...')
+        finally:
+            signals.request_finished.send(self)
+            print("end")
