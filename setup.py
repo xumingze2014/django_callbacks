@@ -18,13 +18,13 @@ includes = (
 )
 
 setup(
-    name="sms-provider-python",
+    name="django_callbacks",
     version='0.1.0',
     packages=find_packages(),
     install_requires=requires,
     description='django_callbacks',
     long_description=README,
-    author="zhumengyuan",
+    author="xumingze",
     license="BSD",
     url=""
 )
