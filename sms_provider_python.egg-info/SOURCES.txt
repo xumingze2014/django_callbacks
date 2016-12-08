@@ -1,0 +1,8 @@
+setup.py
+django_callbacks/__init__.py
+django_callbacks/tasks.py
+sms_provider_python.egg-info/PKG-INFO
+sms_provider_python.egg-info/SOURCES.txt
+sms_provider_python.egg-info/dependency_links.txt
+sms_provider_python.egg-info/requires.txt
+sms_provider_python.egg-info/top_level.txt
