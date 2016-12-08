@@ -1,3 +1,7 @@
+CHANGES.md
+LICENSE
+MANIFEST.in
+README.md
 setup.py
 django_callback.egg-info/PKG-INFO
 django_callback.egg-info/SOURCES.txt
