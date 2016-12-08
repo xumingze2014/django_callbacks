@@ -14,7 +14,7 @@ requires = [
 ]
 
 includes = (
-    'django_callbacks',
+    'django_callback',
 )
 
 setup(
